@@ -8,12 +8,12 @@ import polaco1 from '@assets/polaco1.webp'
 import argentina from '@assets/argentina.webp'
 import universitario from '@assets/escudo_univ.webp'
 //Escudos trayectoria
-import escudoAlmagro from '@assets/escudos/escudo_almagro.webp'
 import escudoCentralCordoba from '@assets/escudos/escudo_centralcordoba.webp'
-import escudoTemuco from '@assets/escudos/escudo_temuco.webp'
-import escudoUniMardel from '@assets/escudos/escudo_unimardel.webp'
-import escudoVillaSanCarlos from '@assets/escudos/escudo_villasancarlos.webp'
-import escudoGimnasiaJujuy from '@assets/escudos/escudo_gimnasiajujuy.webp'
+import escudoBelgrano from '@assets/escudos/escudo_belgrano.webp'
+import escudoBrown from '@assets/escudos/escudo_brown.webp'
+import escudoCae from '@assets/escudos/escudo_cae.webp'
+import escudoDelfin from '@assets/escudos/escudo_delfin.webp'
+import escudoFerro from '@assets/escudos/escudo_ferro.webp'
 //Gallery
 import image1 from '@assets/gallery/image1.webp'
 import image2 from '@assets/gallery/image2.webp'
@@ -37,17 +37,19 @@ import ledsports from '@assets/contact3.webp'
 import moon from '@assets/contact4.webp'
 
 
-const name = 'MATIAS'
-const fullName = 'DI BENEDETTO'
+const name = 'JUAN PABLO'
+const fullName = 'RUIZ'
+const fullName2 = 'GOMEZ'
 
 export const playerData = {
   name,
   fullName,
+  fullName2,
   initials: `${name[0]}${fullName[0]}`,
   displayName: `${name} ${fullName}`,
-  number: 5,
-  position: 'Defensa Central',
-  positionShort: 'DC',
+  number: 19,
+  position: 'Mediocampista',
+  positionShort: 'MC',
   nationality: 'Argentina',
   nationalityFlag: argentina,
   age: 33,
@@ -56,7 +58,7 @@ export const playerData = {
   foot: 'Izquierdo',
   birthDate: '19 / 11 / 1992',
   birthPlace: 'Jose Marmol, Argentina',
-  currentClub: 'Universitario',
+  currentClub: 'Emelec',
   logoCurrentClub: universitario,
   image: polaco1,
   
@@ -82,58 +84,58 @@ export const playerData = {
 
   clubs: [
     {
-      name:    'Universitario',
-      country: 'Perú',
-      years:   '2023 — Actualidad',
+      name:    'Emelec',
+      country: 'Ecuador',
+      years:   '2024 — Actualidad',
       logo:    universitario,
-      titles:  ['Campeon de la Liga 1 2023', 'Campeon de la Liga 1 2024', 'Campeon de la Liga 1 2025'],
+      titles:  [],
       info:    '',
     },
     {
-      name:    'Central Córdoba',
+      name:    'Delfín SC',
+      country: 'Ecuador',
+      years:   '2023',
+      logo:    escudoDelfin,
+      titles:  [],
+      info:    'Prestamo',
+    },
+    {
+      name:    'Ferro Carril Oeste',
       country: 'Argentina',
       years:   '2022',
+      logo:    escudoFerro,
+      titles:  [],
+      info:    '',
+    },
+    {
+      name:    'Belgrano',
+      country: 'Argentina',
+      years:   '2021',
+      logo:    escudoBelgrano,
+      titles:  [],
+      info:    'Prestamo',
+    },
+    {
+      name:    'Estudiantes (BA)',
+      country: 'Argentina',
+      years:   '2017 — 2018 / 2019 — 2020',
+      logo:    escudoCae,
+      titles:  [],
+      info:    '',
+    },
+    {
+      name:    'Central Córdoba (SdE)',
+      country: 'Argentina',
+      years:   '2019 — 2020',
       logo:    escudoCentralCordoba,
       titles:  [],
       info:    '',
     },
     {
-      name:    'Deportes Temuco',
-      country: 'Chile',
-      years:   '2019 — 2022',
-      logo:    escudoTemuco,
-      titles:  [],
-      info:    '',
-    },
-    {
-      name:    'Gimnasia y Esgrima de Jujuy',
+      name:    'Brown de Adrogué',
       country: 'Argentina',
-      years:   '2018',
-      logo:    escudoGimnasiaJujuy,
-      titles:  [],
-      info:    'Prestamo',
-    },
-    {
-      name:    'Almagro',
-      country: 'Argentina',
-      years:   '2015 — 2018',
-      logo:    escudoAlmagro,
-      titles:  [],
-      info:    '',
-    },
-    {
-      name:    'Villa San Carlos',
-      country: 'Argentina',
-      years:   '2014 — 2015',
-      logo:    escudoVillaSanCarlos,
-      titles:  [],
-      info:    '',
-    },
-    {
-      name:    'C.A Unión de Mar del Plata',
-      country: 'Argentina',
-      years:   '2014',
-      logo:    escudoUniMardel,
+      years:   '2015 — 2017',
+      logo:    escudoBrown,
       titles:  [],
       info:    '',
     },
@@ -144,7 +146,7 @@ export const playerData = {
       id: 'v1',
       instagramId: 'DS3kqlVjokC',
       title: 'Highlight 2025',
-      fullTitle: 'Matias Di Benedetto | Jugadas destacadas 2025',
+      fullTitle: 'Juan Pablo Ruiz Gomez | Jugadas destacadas 2025',
       season: 'Highlight 2025',
       league: 'LIGA 1 2025',
       thumbnail: image7,
@@ -155,7 +157,7 @@ export const playerData = {
       id: 'v2',
       instagramId: 'DPANDAIjS8S',
       title: 'Gol y jugadas',
-      fullTitle: 'Matias Di Benedetto | Compilado de goles',
+      fullTitle: 'Juan Pablo Ruiz Gomez | Compilado de goles',
       season: 'Gol y jugadas',
       league: 'LIGA 1 2025',
       thumbnail: image5,
@@ -166,7 +168,7 @@ export const playerData = {
       id: 'v3',
       instagramId: 'C1iDaZ6uAYa',
       title: 'Highlight 2023',
-      fullTitle: 'Matias Di Benedetto | Asistencias y juego',
+      fullTitle: 'Juan Pablo Ruiz Gomez | Asistencias y juego',
       season: 'Highlight 2023',
       league: 'LIGA 1 2023',
       thumbnail: image2,

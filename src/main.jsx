@@ -7,6 +7,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import theme from './theme'
 import App from './App'
+import './styles/rowan.css'
 import './styles/globals.css'
 
 gsap.registerPlugin(ScrollTrigger)

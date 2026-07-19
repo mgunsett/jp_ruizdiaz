@@ -1,70 +1,58 @@
 import { extendTheme } from '@chakra-ui/react'
 
-// ══════════════════════════════════════════════════════════════════
-// Paletas de marca — Universitario de Deportes
-// Basadas en el escudo (granate #9E1B1E sobre crema) y las camisetas:
-// titular crema con acentos granate / alterna granate con bastones.
-//
-// Los nombres de los tokens se conservan (amber, dark, bone, etc.)
-// para que todos los componentes funcionen sin cambios: lo que antes
-// era "dorado" ahora es el granate de la U, y "bone/boneWarm" pasan
-// a ser el texto principal y el crema del escudo.
-// ══════════════════════════════════════════════════════════════════
+// ─── PALETA OSCURA — 
 
-// ─── PALETA OSCURA — negro cálido + arena + vino apagado ───────────
-// Tonalidades editoriales: arena/crema como acento principal, vino
-// desaturado para números y destacados, y el marrón rosado de la
-// camiseta alternativa como detalle en hovers.
 const brandDark = {
-  brown:      '#171514', // base casi negra cálida neutra
-  brownDark:  '#000000', // negro profundo
-  brownLight: '#3B322E', // sombra marrón cálida
-  amber:      '#dbccaf', // arena/dorado apagado (bordes/títulos)
-  amber2:     '#c2ac828e',
-  amberDark:  '#8F7B54', // arena oscura
-  amberLight: '#c2ac824f', // arena translúcida (bordes suaves)
-  dorado:     '#A04E56', // vino luminoso (acentos destacados)
-  orange:     '#B08573', // marrón rosado camiseta alterna (hover botones)
-  orangeDark: '#8A6353', // marrón rosado oscuro
-  orangeLight:'#C79E8B', // marrón rosado claro
-  dark:       '#2321209f', // fondo casi negro cálido (mantener alpha)
-  dark3:      '#232120a1',
-  dark2:      '#a5a09a', // divisores neutros cálidos
-  gray:       '#AFA08D', // arena apagada (texto secundario)
-  gray2:      '#8B4149', // vino apagado (números grandes/relleno)
-  bone:       '#FFFFFF', // texto principal
-  boneWarm:   '#E3D4B1', // crema arena (detalles)
+  brown:      '#0C1A33', // base azul marino muy oscuro (tarjetas/nodos)
+  brownDark:  '#050C1A', // azul casi negro profundo
+  brownLight: '#1C2E4F', // sombra azul
+  amber:      '#cbd8ec', // plata azulada clara (bordes/títulos)
+  amber2:     '#a8bcda8e',
+  amberDark:  '#8397B8', // plata azulada media
+  amberLight: '#aec5e64f', // plata translúcida (bordes suaves)
+  dorado:     '#3F7BFF', // azul eléctrico luminoso (acentos destacados)
+  orange:     '#2E63E0', // azul medio (hover botones)
+  orangeDark: '#214BB0', // azul hover oscuro
+  orangeLight:'#5A8DFF', // azul hover claro
+  dark:       '#0A14289f', // fondo azul casi negro (mantener alpha)
+  dark3:      '#0a1428a1',
+  dark2:      '#8f9bb0', // divisores neutros azulados
+  gray:       '#93A2BA', // plata apagada (texto secundario)
+  gray2:      '#39568F', // azul acero apagado (números grandes/relleno)
+  bone:       '#ffffff', // texto principal
+  boneWarm:   '#D6E1F0', // plata clara (detalles)
   rec:        '#E5484D', // rojo del indicador REC
-  bgRef:      '#b0857321', // bg de hover en cajas (guiño camiseta alterna)
+  bgRef:      '#2e63e021', // bg de hover en cajas (guiño azul eléctrico)
+  bone2:       '#757070a4'
 }
 
-// ─── PALETA CLARA — inspirada en la camiseta titular crema ─────────
+// ─── PALETA CLARA — 
 const brandLight = {
-  brown:      '#FCF8EC', // superficie clara (tarjetas/nodos)
-  brownDark:  '#EFE6CF', // crema profundo (sombras suaves)
-  brownLight: '#7A3A3C', // granate amarronado (texto de apoyo)
-  amber:      '#9E1B1E', // granate del escudo (bordes/títulos)
-  amber2:     '#9e1b1e8e',
-  amberDark:  '#701316', // granate oscuro
-  amberLight: '#9e1b1e40', // granate translúcido (bordes suaves)
-  dorado:     '#B22A2E', // rojo U (acentos destacados)
-  orange:     '#8F191C', // hover de botones
-  orangeDark: '#6E1214', // hover de botones (oscuro)
-  orangeLight:'#C24448', // hover de botones (claro)
-  dark:       '#F5EFDE', // fondo crema (camiseta titular)
-  dark3:      '#EFE8D2',
-  dark2:      '#CDBFA5', // divisores sobre crema
-  gray:       '#7D6E5F', // texto secundario cálido
-  gray2:      '#8F393C', // granate apagado (números grandes/relleno)
-  bone:       '#241718', // texto principal (casi negro granate)
-  boneWarm:   '#8A1E22', // granate (detalles/labels)
+  brown:      '#FFFFFF', // superficie clara (tarjetas/nodos)
+  brownDark:  '#E7EDF7', // azul-gris claro (sombras suaves)
+  brownLight: '#1D3A72', // azul de apoyo (texto)
+  amber:      '#123FC4', // azul royal del escudo (bordes/títulos)
+  amber2:     '#123fc48e',
+  amberDark:  '#0B2C94', // azul oscuro
+  amberLight: '#123fc440', // azul translúcido (bordes suaves)
+  dorado:     '#0A46DE', // azul eléctrico (acentos destacados)
+  orange:     '#123FC4', // hover de botones
+  orangeDark: '#0B2C94', // hover de botones (oscuro)
+  orangeLight:'#3A6BEA', // hover de botones (claro)
+  dark:       '#F3F7FC', // fondo blanco azulado (camiseta plata)
+  dark3:      '#EAF0F9',
+  dark2:      '#C2CFE2', // divisores sobre blanco azulado
+  gray:       '#5A6A82', // texto secundario azulado
+  gray2:      '#4A5F92', // azul apagado (números grandes/relleno)
+  bone:       '#0A1A3B', // texto principal (azul muy oscuro)
+  boneWarm:   '#123FC4', // azul (detalles/labels)
   rec:        '#C1121F', // rojo del indicador REC
-  bgRef:      '#9e1b1e12', // bg de hover en cajas
+  bgRef:      '#123fc412', // bg de hover en cajas
 }
 
-// Elegí la paleta de la landing:
-//  'dark'  → fondo oscuro granate, acentos rojo U + crema
-//  'light' → fondo crema titular, acentos granate del escudo
+// Elegir paleta :
+//  'dark' 
+//  'light'
 const PALETTE = 'dark'
 
 const brand = PALETTE === 'light' ? brandLight : brandDark
@@ -78,9 +66,9 @@ const dev = {
 const theme = extendTheme({
   colors: { brand, dev },
   fonts: {
-    heading:   `'Bebas Neue', sans-serif`,
+    heading:   `'Rowan-Bold', sans-serif`,
     body:      `'Barlow', sans-serif`,
-    mono:      `'Barlow Condensed', sans-serif`,
+    mono:      `'Rowan-Light', monospace`,
   },
   styles: {
     global: {

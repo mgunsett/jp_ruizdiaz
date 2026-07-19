@@ -84,7 +84,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Text
-          fontFamily='"Dela Gothic One", sans-serif'
+          fontFamily="'Rowan-Semibold', sans-serif"
           fontSize="2xl"
           letterSpacing="wider"
           color="brand.amber"
@@ -108,7 +108,7 @@ export default function Navbar() {
               px={4}
               py={2}
               borderRadius="10px"
-              fontFamily='"Dela Gothic One", sans-serif'
+              fontFamily="'Rowan-Semibold', sans-serif"
               fontSize="2xs"
               fontWeight="100"
               letterSpacing="wider"
@@ -153,9 +153,8 @@ export default function Navbar() {
           borderColor='brand.amberLight'
           borderRadius={'5px'}
           fontFamily='heading'
-          fontSize="xs"
-          fontWeight="600"
-          letterSpacing="2px"
+          fontSize="2xs"
+
           textTransform="uppercase"
           color="brand.brownLight"
           cursor="pointer"

@@ -63,14 +63,14 @@ function SocialCard({ item }) {
           h={'30px'}
           mb={6}
           loading="lazy"
-          filter="brightness(0.3)"
+          filter={{ base: "brightness(0.65)", md: "brightness(0.50)" }}
           color="whiteAlpha.700"
           transition="all 0.3s ease"
           _groupHover={{ color: item.hoverColor, filter:"brightness(0.9)"}}
         />
         )}
         <Text
-          fontFamily='"mono", monospace'
+          fontFamily='mono'
           fontSize="10px"
           letterSpacing="0.24em"
           textTransform="uppercase"
@@ -80,7 +80,7 @@ function SocialCard({ item }) {
         >
           {item.label}
         </Text>
-        <Text fontFamily='"Dela Gothic One", sans-serif' color={'brand.bone'} fontSize={{base:'xl',md:"2xl"}} _groupHover={{ color: 'brand.gray2' }}>
+        <Text fontFamily='heading' color={'brand.bone'} fontSize={{base:'xl',md:"2xl"}} _groupHover={{ color: 'brand.gray2' }}>
 
           {item.handle}
         </Text>
@@ -133,7 +133,7 @@ function ContactRow({ item, gold }) {
             alt={`Logo de ${item.label}`}
             w="100%"
             loading="lazy"
-            filter="brightness(0.3)"
+            filter={{ base: "brightness(0.70)", md: "brightness(0.65)" }}
             transition="all 0.3s ease"
             _groupHover={{ 
               filter: 'brightness(0.98)',
@@ -143,7 +143,7 @@ function ContactRow({ item, gold }) {
         )}
         <Box ml={gold ? '8px' : '16px'}>
           <Text
-            fontFamily='"mono", monospace'
+            fontFamily='mono'
             fontSize="10px"
             letterSpacing="0.24em"
             textTransform="uppercase"
@@ -153,7 +153,7 @@ function ContactRow({ item, gold }) {
             {item.label}
           </Text>
           <Text 
-          fontFamily='"Dela Gothic One", sans-serif' 
+          fontFamily='heading'
           fontSize="2xl" 
           color="brand.bone" 
           fontWeight={500} 
@@ -208,11 +208,11 @@ export function ContactSection() {
       <Box position="relative" zIndex={1} maxW="1400px" mx="auto">
         {/* Header */}
         <Box ref={headerRef} mb={{ base: 8, md: 10 }}>
-          <Text fontFamily='"Shadows Into Light", cursive' fontSize="10px" color="brand.bone" letterSpacing="0.28em"
+          <Text fontFamily='mono' fontSize="10px" color="brand.bone" letterSpacing="0.28em"
                   textTransform="uppercase" letterSpacing="widest">
             #Redes
           </Text>
-          <Text as="h2" fontFamily="heading" fontWeight="bold" fontSize={{ base: '5xl', lg: '6xl' }}
+          <Text as="h2" fontFamily="heading"  fontSize={{ base: '5xl', lg: '5xl' }}
                   color="brand.amber" lineHeight={1}>
             Contacto
           </Text>

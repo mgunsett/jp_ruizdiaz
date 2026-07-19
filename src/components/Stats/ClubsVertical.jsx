@@ -14,7 +14,7 @@ function ClubsHeader() {
             textTransform="uppercase" letterSpacing="widest">
         Trayectoria
       </Text>
-      <Text as="h2" fontFamily='"Dela Gothic One", sans-serif' fontWeight="bold"
+      <Text as="h2" fontFamily="heading" fontWeight="bold"
             fontSize={{ base: '5xl', lg: '4xl' }} color="brand.amber" lineHeight={1}>
         Clubes
       </Text>

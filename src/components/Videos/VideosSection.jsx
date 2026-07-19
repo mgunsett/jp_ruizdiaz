@@ -114,9 +114,9 @@ export default function VideosSection() {
       ref={sectionRef}
       position="relative"
       minH="100vh"
-      bg="brand.dark"
+      bg="brand.bone2"
       px={{ base: 2, md: 12, lg: 40 }}
-      pt={{ base: 20, md: '10%' }}
+      pt={{ base: 20, md: '8%' }}
       pb={{ base: 12, md: '10%' }}
       overflow="hidden"
     >
@@ -136,8 +136,8 @@ export default function VideosSection() {
         ref={ghostRef}
         aria-hidden
         position="absolute"
-        top={{ base: '10%', md: '12%' }}
-        right={{ base: '-15%', md: '8%' }}
+        top={{ base: '10%', md: '0%' }}
+        right={{ base: '-15%', md: '5%' }}
         fontFamily="heading"
         fontSize={{ base: '80vw', md: '40vw' }}
         lineHeight={0.8}
@@ -145,7 +145,7 @@ export default function VideosSection() {
         pointerEvents="none"
         userSelect="none"
         zIndex={0}
-        sx={{ WebkitTextStroke: '1.5px rgba(189,167,142,0.14)' }}
+        sx={{ WebkitTextStroke: '1.5px rgba(122, 139, 194, 0.28)' }}
       >
         {playerData.number}
       </Text>
@@ -153,10 +153,10 @@ export default function VideosSection() {
       <Box maxW="1240px" mx="auto" position="relative" zIndex={1}>
         {/* ── Header ── */}
         <Flex direction="column" align="flex-start" justify="flex-start" ref={headerRef} mb={{ base: 8, md: 12 }} ml={{ base: 0, md: '-30px', lg: '-90px' }}>
-          <Text fontFamily='"mono", monospace' fontSize="10px" color="brand.bone" textTransform="uppercase" letterSpacing="widest">
+          <Text fontFamily='"mono", monospace' fontSize="10px" color="brand.boneWarm" textTransform="uppercase" letterSpacing="widest">
             HIGHLIGHTS
           </Text>
-          <Text as="h2" fontFamily='"Dela Gothic One", sans-serif' fontWeight="bold" fontSize={{ base: '2xl', lg: '4xl' }} color="brand.amber" lineHeight={1}>
+          <Text as="h2" fontFamily="heading" fontWeight="bold" fontSize={{ base: '2xl', lg: '5xl' }} color="brand.brownLight" lineHeight={1}>
             Videos
           </Text>
         </Flex>
