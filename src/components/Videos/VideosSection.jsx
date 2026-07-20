@@ -156,7 +156,7 @@ export default function VideosSection() {
           <Text fontFamily='"mono", monospace' fontSize="10px" color="brand.boneWarm" textTransform="uppercase" letterSpacing="widest">
             HIGHLIGHTS
           </Text>
-          <Text as="h2" fontFamily="heading" fontWeight="bold" fontSize={{ base: '2xl', lg: '5xl' }} color="brand.brownLight" lineHeight={1}>
+          <Text as="h2" fontFamily="heading" fontWeight="bold" fontSize={{ base: '4xl', lg: '5xl' }} color="brand.brownLight" lineHeight={1}>
             Videos
           </Text>
         </Flex>

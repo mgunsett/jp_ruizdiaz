@@ -17,23 +17,23 @@ const MotionBox = motion(Box)
 function PlayerPanel() {
   return (
     <Flex
-      direction="row"
-      justifyContent="center"
-      alignItems="center"
-      gap={{ base: 3, md: 5 }}
+      direction={{ base: "column", md: "row" }}
+      justifyContent={"center"}
+      alignItems={{ base: 'flex-start', md: 'center' }}
+      gap={{ base: '15px', md: 5 }}
       fontFamily="'Rowan-Semibold', sans-serif" 
     >
       <Text
         className="player-number"        
-        fontSize={{ base: '16vw', md: '9vw', lg: '5.5vw' }}
+        fontSize={{ base: '24vw', md: '9vw', lg: '5.5vw' }}
         lineHeight={0.9}
         color="brand.gray2"
       >
         {playerData.number}
       </Text>
-      <Box w="1px" h={{ base: '52px', md: '70px', lg: '80px' }} bg="brand.amber" />
+      <Box w={{ base: '96px', md: '1px', lg: '1px' }} h={{ base: '1px', md: '70px', lg: '80px' }} bg="brand.amber" />
       <Flex direction="column" justifyContent="center" gap={1}>
-        <Flex gap={1} justifyContent="flex-start" alignItems="center">
+        <Flex className='player-position' gap={1} justifyContent="flex-start" alignItems={{ base: "flex-start", md: "center" }} direction='row'>
           <Text fontSize={{ base: '9px', md: '10px' }} color="brand.bone"
             textTransform="uppercase" letterSpacing="widest">
             Posición
@@ -126,7 +126,7 @@ export default function Hero() {
           zIndex={0}
           pointerEvents="none"
           display="flex"
-          justifyContent="center"
+          justifyContent={{ base: "flex-start", md: "center" }}
           alignItems={{ base: 'flex-end', md: 'flex-start' }}
           mt={{ base: 20, md: 12 }}
           ml={{ base: '0%', md: '25%' }}
@@ -138,13 +138,14 @@ export default function Hero() {
           }}
         >
           <Image
+            className="hero-bg"
             src={heroBg}
             alt=""
             aria-hidden="true"
             draggable={false}
             // Controlá el tamaño acá 👇
-            w={{ base: '100vw', md: '30vw' }}
-            h={{ base: '90vh', md: 'auto' }}
+            w={{ base: '120vw', md: '30vw' }}
+            h={{ base: '120vh', md: 'auto' }}
             objectFit={{ base: 'cover', md: 'contain' }}
             objectPosition={{ base: 'center', md: 'center top' }}
             opacity={{ base: 0.21, lg: 0.20 }}
@@ -157,6 +158,7 @@ export default function Hero() {
 
         {/* Visible name text — centrado, detrás del jugador */}
         <Box
+          className="player-name-container"
           position="absolute"
           inset={0}
           pointerEvents="none"
@@ -164,7 +166,7 @@ export default function Hero() {
           flexDir="column"
           alignItems="center"
           justifyContent="flex-start"
-          pt={{ base: '24%', md: '12%', lg: '16%' }}
+          pt={{ base: '54%', md: '12%', lg: '16%' }}
         >
           <Flex
             direction="column"
@@ -179,37 +181,49 @@ export default function Hero() {
               as="span"
               display="block"
               fontFamily="'Rowan-Semibold', sans-serif"
-              fontSize={{ base: '10vw', md: '6vw', lg: '4.5vw' }}
-              letterSpacing={{ base: '0.3em', md: '0.45em' }}
-              pl={{ base: '0.3em', md: '0.45em' }}
+              fontSize={{ base: '6vw', md: '6vw', lg: '4.5vw' }}
+              letterSpacing={{ base: '0', md: '0.45em' }}
+              pl={{ base: '0em', md: '0.45em' }}
               color="brand.amber"
               lineHeight={1}
               textAlign="center"
               style={{ opacity: 0 }}
+              position={{ base: "absolute", md: "static" }}
+              top={{ base: '240px', md: "auto" }}
+              left={{ base: "18px", md: "auto" }}
             >
               {playerData.name}
             </Text>
-            <Flex justifyContent="center" alignItems="center" w="100%" gap={{ base: 0, md: 36 }} mt={{ base: '-3px', md: '-5px' }}>
+            <Flex justifyContent="center" alignItems="center" w="100%" gap={{ base: 2, md: 36 }} mt={{ base: '-3px', md: '-5px' }}>
               <Text
+                className="player-fullname 1"
                 ref={line2Ref}
                 as="span"
                 display="block"
                 fontFamily="'Rowan-Semibold', sans-serif"
-                fontSize={{ base: '21vw', md: '12.5vw', lg: '10.5vw' }}
+                fontSize={{ base: '16vw', md: '12.5vw', lg: '10.5vw' }}
                 color="brand.bone"
                 lineHeight={0.85}
                 textAlign="center"
                 whiteSpace={{ base: 'normal', md: 'nowrap' }}
-                zIndex={6}
+                zIndex={{ base: 4, md: 6 }}
+                position={{base:"absolute", md:"static"}}
+                top={{base:'270px', md:"auto"}}
+                left={{base:"15px", md:"auto"}}
               >
                 {playerData.fullName}
               </Text>
               <Text
+                className="player-fullname 2"
                 ref={line3Ref}
+                position={{base:"absolute", md:"static"}}
+                top={{base:'390px', md:"auto"}}
+                left={{base:"165px", md:"auto"}}
+                zIndex={6}
                 as="span"
                 display="block"
                 fontFamily="'Rowan-Semibold', sans-serif"
-                fontSize={{ base: '21vw', md: '12.5vw', lg: '10.5vw' }}
+                fontSize={{ base: '16vw', md: '12.5vw', lg: '10.5vw' }}
                 color="brand.bone"
                 lineHeight={0.85}
                 textAlign="center"
@@ -238,7 +252,7 @@ export default function Hero() {
         >
           <Box
             ref={photoRef}
-            h={{ base: '58vh', md: '70vh', lg: '86vh' }}
+            h={{ base: '70vh', md: '70vh', lg: '86vh' }}
             style={{ clipPath: 'inset(100% 0 0 0)', opacity: 0 }}
           >
             <Image
@@ -246,7 +260,7 @@ export default function Hero() {
               src={playerData.image}
               alt={`${playerData.displayName}, ${playerData.position.toLowerCase()} profesional de ${playerData.currentClub}`}
               h="100%"
-              w={{ base: '92vw', md: '48vw', lg: '40vw' }}
+              w={{ base: '96vw', md: '48vw', lg: '40vw' }}
               objectFit="contain"
               objectPosition="bottom center"
               draggable={false}
@@ -258,8 +272,8 @@ export default function Hero() {
         <Box
           className="player-info"
           position="absolute"
-          left={{ base: '0', md: '15%' }}
-          bottom={{ base: '115px', md: '6%', lg: '25%' }}
+          left={{ base: '60%', md: '15%' }}
+          bottom={{ base: '180px', md: '6%', lg: '25%' }}
           display="flex"
           justifyContent="center"
           zIndex={15}
@@ -272,7 +286,7 @@ export default function Hero() {
           position="absolute"
           bottom="12%"
           right={0}
-          top={{ base: 'auto', lg: '20%' }}
+          top={{ base: 'auto', lg: '60%' }}
           zIndex={10}
           display={{ base: 'none', lg: 'block' }}
         >

@@ -30,23 +30,36 @@
 
 @media screen and (max-width: 390px){
   .player-photo-container {
-    padding-top: 90px !important;
-    padding-left: 45px !important;
+    margin-top: 500px !important;
   }
   .player-photo { 
     width: 340px !important;
-    max-width: none !important;
   }
   .player-number {
-    font-size: 110px !important;
+    font-size: 80px !important;
+    margin-bottom: -10px !important;
+  }
+  .player-name-container {
+    top: -20px !important;
   }
   .player-name {
-    font-size: 22vw !important;
+    font-size: 15px !important;
+    top: 255px !important;
+  }
+  .player-fullname {
+    font-size: 50px !important;
+  }
+  .player-fullname.\31 {
+    left: 10px ;
   }
   .player-info {
-    top: 300px !important;
+    top: 500px;
+    left: 65% !important;
   }
-  /* .player-clubs {
-    padding-right: 0 !important;
-  } */
+  .hero-bg {
+    height: 130% !important;
+  }
+  .player-position {
+    flex-direction: column !important;
+  }
 }

@@ -212,7 +212,7 @@ export function ContactSection() {
                   textTransform="uppercase" letterSpacing="widest">
             #Redes
           </Text>
-          <Text as="h2" fontFamily="heading"  fontSize={{ base: '5xl', lg: '5xl' }}
+          <Text as="h2" fontFamily="heading"  fontSize={{ base: '4xl', lg: '5xl' }}
                   color="brand.amber" lineHeight={1}>
             Contacto
           </Text>
