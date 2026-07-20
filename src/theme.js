@@ -22,7 +22,7 @@ const brandDark = {
   bone:       '#ffffff', // texto principal
   boneWarm:   '#D6E1F0', // plata clara (detalles)
   rec:        '#E5484D', // rojo del indicador REC
-  bgRef:      '#2e63e021', // bg de hover en cajas (guiño azul eléctrico)
+  bgRef:      '#0f1f4421', // bg de hover en cajas (guiño azul eléctrico)
   bone2:       '#757070a4'
 }
 

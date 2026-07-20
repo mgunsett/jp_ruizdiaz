@@ -111,7 +111,7 @@ function ContactRow({ item, gold }) {
       _hover={{
         transform: 'translateY(-3px)',
         borderColor: gold ? 'brand.orangeLight' : 'brand.amber',
-        bg: gold ? 'rgba(163,107,44,0.04)' : 'brand.bgRef',
+        bg:'rgba(163,107,44,0.04)',
       }}
     >
       <Flex align="center" gap={4}>
