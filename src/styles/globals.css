@@ -30,30 +30,30 @@
 
 @media screen and (max-width: 390px){
   .player-photo-container {
-    margin-top: 500px !important;
+    margin-top: 550px !important;
   }
   .player-photo { 
     width: 340px !important;
   }
   .player-number {
     font-size: 80px !important;
-    margin-bottom: -10px !important;
+    margin-bottom: 2px !important;
   }
   .player-name-container {
-    top: -20px !important;
+    top: -40px !important;
   }
   .player-name {
     font-size: 15px !important;
     top: 255px !important;
   }
   .player-fullname {
-    font-size: 50px !important;
+    font-size: 57px !important;
   }
   .player-fullname.\31 {
     left: 10px ;
   }
   .player-info {
-    top: 500px;
+    top: 450px;
     left: 65% !important;
   }
   .hero-bg {
