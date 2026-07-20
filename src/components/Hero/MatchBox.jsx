@@ -44,23 +44,23 @@ function MatchSlot({ data, label, labelColor }) {
         <Box textAlign="center" px={2}>
           {homeScore !== null && awayScore !== null ? (
             <HStack spacing={1} justify="center">
-              <Text fontFamily="heading" fontSize="2xl" color="white" lineHeight={1}>
+              <Text fontFamily="heading" fontSize={{ base: "lg", md: "2xl" }} color="white" lineHeight={1}>
                 {homeScore}
               </Text>
-              <Text fontFamily="heading" fontSize="lg" color="brand.brown" lineHeight={1}>
+              <Text fontFamily="heading" fontSize={{ base: "sm", md: "lg" }} color="brand.brown" lineHeight={1}>
                 —
               </Text>
-              <Text fontFamily="heading" fontSize="2xl" color="white" lineHeight={1}>
+              <Text fontFamily="heading" fontSize={{ base: "lg", md: "2xl" }} color="white" lineHeight={1}>
                 {awayScore}
               </Text>
             </HStack>
           ) : (
-            <Text fontFamily="heading" fontSize="xl" color="brand.amber" letterSpacing="wider">
+            <Text fontFamily="heading" fontSize={{ base: "md", md: "xl" }} color="brand.amber" letterSpacing="wider">
               VS
             </Text>
           )}
           {competition && (
-            <Text fontFamily="mono" fontSize="8px" color="brand.gray" letterSpacing="wider"
+            <Text fontFamily="mono" fontSize={{ base: "5px", md: "8px" }} color="brand.gray" letterSpacing="wider"
                   textTransform="uppercase" mt={0.5} textAlign="center">
               {competition}
             </Text>
