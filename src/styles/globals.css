@@ -28,19 +28,19 @@
   }
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 384px){
   .player-photo-container {
-    margin-top: 550px !important;
+    margin-top: 600px !important;
   }
   .player-photo { 
-    width: 340px !important;
+    width: 300px !important;
   }
   .player-number {
     font-size: 80px !important;
     margin-bottom: 2px !important;
   }
   .player-name-container {
-    top: -40px !important;
+    top: -60px !important;
   }
   .player-name {
     font-size: 15px !important;
