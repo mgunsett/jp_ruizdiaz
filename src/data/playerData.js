@@ -25,8 +25,9 @@ import image7 from '@assets/gallery/image7.webp'
 import image8 from '@assets/gallery/image8.webp'
 import image9 from '@assets/gallery/image9.webp'
 import image10 from '@assets/gallery/image10.webp'
-//Video
-import photoGraph from '@assets/perfil_video.webp'
+import image12 from '@assets/gallery/image12.webp'
+import image13 from '@assets/gallery/image13.webp'
+import image14 from '@assets/gallery/image14.webp'
 //Prensa
 import logo1 from '@assets/logos/logo1.webp'
 import logo2 from '@assets/logos/logo2.webp'
@@ -190,6 +191,9 @@ export const playerData = {
     { id: 8, src: image8, alt: 'Juan Pablo Ruiz', caption: 'Emelec',     category: 'Partido', aspect: 'wide' },
     { id: 9, src: image9, alt: 'Juan Pablo Ruiz', caption: 'Emelec', category: 'Partido', aspect: 'wide' },
     { id: 10, src: image10, alt: 'Juan Pablo Ruiz', caption: 'Emelec',     category: 'Partido', aspect: 'wide' },
+    { id: 12, src: image13, alt: 'Juan Pablo Ruiz', caption: 'Emelec',     category: 'Partido', aspect: 'wide' },
+    { id: 13, src: image14, alt: 'Juan Pablo Ruiz', caption: 'Emelec',     category: 'Partido', aspect: 'wide' },
+    { id: 14, src: image1, alt: 'Juan Pablo Ruiz', caption: 'Emelec',     category: 'Partido', aspect: 'wide' },
 
   ],
 
