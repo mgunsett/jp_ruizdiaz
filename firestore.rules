@@ -20,6 +20,13 @@ service cloud.firestore {
         allow read: if true;
         allow write: if request.auth != null;
       }
+
+      // Estadísticas por partido (last | prev) que carga la sincronización
+      // con API-Football desde el panel.
+      match /stats/{statId} {
+        allow read: if true;
+        allow write: if request.auth != null;
+      }
     }
   }
 }

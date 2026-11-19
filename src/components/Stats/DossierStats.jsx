@@ -3,6 +3,7 @@ import { Box, Flex, Grid, HStack, Image, Text } from '@chakra-ui/react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { playerData } from '../../data/playerData.js'
+import { LastMatchStats } from './LastMatchStats.jsx'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -317,6 +318,11 @@ export function DossierStats() {
 
       <Box position="relative" zIndex={1}>
         <SeasonPanel />
+
+        {/* Se completa sola desde API-Football; si no hay datos no se muestra */}
+        <Box mt={{ base: 6, md: 8 }} _empty={{ display: 'none' }}>
+          <LastMatchStats />
+        </Box>
 
         <Box mt={{ base: 8, md: 10 }}>
           <SkillsBlock overall={overall} />

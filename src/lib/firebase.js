@@ -29,3 +29,9 @@ export const storage = app ? getStorage(app) : null
 export function playerMatchDoc(slot) {
   return doc(db, 'players', PLAYER_SLUG, 'matches', slot)
 }
+
+// Estadísticas por partido ('last' | 'prev') que escribe la sincronización
+// con API-Football desde el panel de resultados.
+export function playerStatsDoc(slot) {
+  return doc(db, 'players', PLAYER_SLUG, 'stats', slot)
+}
