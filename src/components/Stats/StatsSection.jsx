@@ -12,6 +12,7 @@ import { DossierStats } from './DossierStats.jsx'
 import { RingsStats } from './RingsStats.jsx'
 import { ClubsVertical } from './ClubsVertical.jsx'
 import { ClubsCards } from './ClubsCards.jsx'
+import useSeasonStats from '../../hooks/useSeasonStats'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -510,6 +511,8 @@ function ClubTimeline() {
 }
 
 export default function StatsSection() {
+  // Con totales de la API el título muestra sólo la temporada en curso.
+  const season = useSeasonStats()
   const sectionRef = useRef(null)
   const titleRef   = useRef(null)
 
@@ -540,7 +543,7 @@ export default function StatsSection() {
           <Box ref={titleRef}>
             <Text fontFamily='"mono", monospace' fontSize="10px" color="brand.bone"
                   textTransform="uppercase" letterSpacing="widest" >
-              Temporada 2025 / 2026
+              {season ? `Temporada ${season.temporada}` : 'Temporada 2025 / 2026'}
             </Text>
             <Text as="h2" fontFamily="heading" fontWeight="bold" fontSize={{ base: '4xl', lg: '5xl' }}
                   color="brand.amber" lineHeight={1}>

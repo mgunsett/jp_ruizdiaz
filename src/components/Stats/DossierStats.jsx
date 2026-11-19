@@ -4,6 +4,7 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { playerData } from '../../data/playerData.js'
 import { LastMatchStats } from './LastMatchStats.jsx'
+import useSeasonStats from '../../hooks/useSeasonStats'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,9 +26,39 @@ function GroupTitle({ children }) {
   )
 }
 
+// Totales de la temporada en curso que llegan de API-Football. Mismas
+// reglas que el último partido: un dato sin valor no se muestra, y los
+// arqueros ven atajadas y goles recibidos en vez de goles y asistencias.
+function seasonTiles(s) {
+  const isNum = (v) => typeof v === 'number' && Number.isFinite(v)
+  const isGk = s.posicion === 'ARQ'
+  const tiles = [
+    { label: 'Partidos', value: s.partidos },
+    { label: 'Minutos', value: isNum(s.minutos) ? `${s.minutos.toLocaleString('es-AR')}'` : null },
+    ...(isGk
+      ? [
+          { label: 'Atajadas', value: s.atajadas },
+          { label: 'Goles recibidos', value: s.golesRec },
+          { label: 'Precisión pases', value: isNum(s.precisionPases) ? `${Math.round(s.precisionPases)}%` : null },
+        ]
+      : [
+          { label: 'Goles', value: s.goles },
+          { label: 'Asistencias', value: s.asistencias },
+          { label: 'Tiros al arco', value: s.tirosArco },
+        ]),
+    { label: 'Valoración', value: isNum(s.rating) ? s.rating.toFixed(1) : null },
+  ]
+  return tiles.filter((t) => t.value !== null && t.value !== undefined)
+}
+
 // ─── TEMPORADA (tarjeta delimitada con encabezado propio) ─────────
 function SeasonPanel() {
   const wrapRef = useRef(null)
+  const season = useSeasonStats()
+  // Con datos de la API se muestra sólo la temporada en curso; sin
+  // ellos, los valores cargados a mano en playerData.
+  const tiles = season ? seasonTiles(season) : playerData.seasonStats
+  const title = season ? `Temporada ${season.temporada}` : 'Temporada 2025 / 2026'
 
   useEffect(() => {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
@@ -47,7 +78,7 @@ function SeasonPanel() {
       )
     }, wrapRef)
     return () => ctx.revert()
-  }, [])
+  }, [season])
 
   return (
     <Box
@@ -79,7 +110,7 @@ function SeasonPanel() {
             letterSpacing="0.24em" textTransform="uppercase"
             color="brand.boneWarm"
           >
-            Temporada 2025 / 2026
+            {title}
           </Text>
         </HStack>
         <Text
@@ -94,12 +125,12 @@ function SeasonPanel() {
       </Flex>
 
       <Grid
-        templateColumns={{ base: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', lg: 'repeat(6, 1fr)' }}
+        templateColumns={{ base: 'repeat(2, 1fr)', sm: 'repeat(3, 1fr)', lg: `repeat(${tiles.length}, 1fr)` }}
         rowGap={5}
         px={{ base: 4, md: 5 }}
         py={{ base: 5, md: 6 }}
       >
-        {playerData.seasonStats.map((s, i) => (
+        {tiles.map((s, i) => (
           <Box
             key={s.label}
             className="dossier-tick"
